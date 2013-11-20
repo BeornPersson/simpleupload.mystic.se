@@ -5,9 +5,9 @@
     <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="panel">
         <h1>About simple image management tool</h1>
-        <p>This page is about the website. It thinks the website is very </p>
+        <p>This page is built with the aid of jQuery, bootstrap, 9lessons.info ajax upload (used mainly as inspiration)</p>
       </div>
 
     </div> <!-- /container -->
