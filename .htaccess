@@ -1,0 +1,19 @@
+#Options +FollowSymlinks -MultiViews
+RewriteEngine On
+#RewriteBase /
+
+php_flag display_errors on
+
+RewriteRule ^(.*)$ $1 [E=Cache-Control:no-cache] 
+
+# Somehow this causes an internal server error 500
+#RewriteCond %{HTTP_HOST} simpleupload\.mystic\.se [NC]
+#RewriteCond %{REQUEST_URI} !^/index\.php [NC]
+#RewriteCond %{REQUEST_URI} !^/$
+#RewriteRule ^(.*)$ controllers/$1 [L,NC]
+
+RewriteRule ^main.php$ controllers/main.php [L]
+RewriteRule ^profile.php$ controllers/profile.php [L]
+RewriteRule ^about.php$ controllers/about.php [L]
+RewriteRule ^images.php$ controllers/images.php [L]
+RewriteRule ^albums.php$ controllers/albums.php [L]
