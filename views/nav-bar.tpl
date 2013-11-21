@@ -46,6 +46,9 @@
               </ul>
             </li> *}
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://simpleupload.mystic.se/index.php?action=logout">Logout</a></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>

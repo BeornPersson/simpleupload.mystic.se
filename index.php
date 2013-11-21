@@ -1,6 +1,17 @@
 <?php
 require_once('config.php');
 
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+	if($_GET['action'] == "logout") {
+		if(isset($_SESSION['is_logged'])) {
+			unset($_SESSION['is_logged']);
+			unset($_SESSION['current_user']);
+			unset($_SESSION['user_data']);
+			$smarty->assign('errorMsg', 'You have successfully been logged out');
+		}
+	}
+}
+
 if (isset($_SESSION['is_logged'])) {
 	header('Location: http://simpleupload.mystic.se/main.php');
 	exit;

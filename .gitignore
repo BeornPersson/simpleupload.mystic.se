@@ -4,6 +4,9 @@ cache/
 # Ignore sftp-config file
 sftp-config.json
 
+# Ignore uploaded images folder
+uploaded_images/
+
 #################
 ## Eclipse
 #################
