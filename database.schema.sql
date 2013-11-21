@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `filename` varchar(255) COLLATE utf8_swedish_ci NOT NULL,
   `uploaded_date` datetime NOT NULL,
   `last_edited` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `uid` int(11) NOT NULL,
   PRIMARY KEY (`iid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
 
