@@ -22,7 +22,7 @@
                     </div>
                     <div class="panel-body">
                       <a href="uploaded_images/{$image.filename}" class="thumbnail"> 
-                        <img src="uploaded_images/{$image.filename}" />
+                        <img src="uploaded_images/thumbnail_{$image.filename}" />
                       </a>
                       <p>{$image.description}</p>
                       <p><a class="btn btn-success" href="" role="button">View details &raquo;</a></p>

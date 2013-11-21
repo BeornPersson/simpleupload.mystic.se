@@ -17,10 +17,8 @@
 
 			$uploaded_date = date('Y-m-d H:i:s');
 
-			$sql = sprintf("INSERT INTO `images`(`uploaded_name`, `user_set_name`, `comment`, `filename`, `uploaded_date`, `uid`) VALUES ('%s','%s','Comment','%s','%s', '%s' )",$up_name, $up_name,$filename,$uploaded_date,$user_id);
+			$sql = sprintf("INSERT INTO `images`(`uploaded_name`, `user_set_name`, `comment`, `filename`, `uploaded_date`, `uid`) VALUES ('%s','%s','Comment','%s','%s', '%s' )",$up_name, $up_name,$filename,$uploaded_date,$user_id);	
 
-			#$sql = "INSERT INTO images (uploaded_name, user_set_name, description, filename, uploaded_date, uid) VALUES ('".$uploaded_name."', '". $uploaded_name."', 'Description', '".$filename."', '". $uploaded_date."',". $user_id .")";
-			
 			return $db->query($sql);
 		}
 

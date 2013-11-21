@@ -40,6 +40,23 @@
 						$insert_id = images::insertImage($filename, $image_name, $_SESSION['current_user']);
 					#	$result = images::linkImageToUser($insert_id, $_SESSION['current_user']);
 
+
+						# Let's resize image to something nicer and more usable
+						# Also need to create a thumbnail for the image
+						$imageHandle = new SimpleImage();
+						$imageHandle->load($newname);
+						$imageHandle->fitInsideArea(800,800);
+						$imageHandle->save($newname);
+
+						# Create thumbnail
+						$imageHandle = new SimpleImage();
+						$imageHandle->load($newname);
+						$imageHandle->fitInsideArea(150,150);
+
+						$thumbnailName = $real_path . "thumbnail_" . $image_name;
+						$imageHandle->save($thumbnailName);
+
+
 						echo "<img src='".$uploadDir.$image_name."' class='thumbnail'>"; 
 					}
 					else {
